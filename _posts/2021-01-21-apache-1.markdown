@@ -1,0 +1,44 @@
+---
+typora-root-url: ../../
+typora-copy-images-to ../imagenes/apache1
+layout: post
+title:  "Práctica: Apache 1"
+categories: ciberseguridad
+---
+Paso uno - Activar el módulo SSL
+
+![1](/myblog/imagenes/apache1/1.png)
+
+![1](/myblog/imagenes/apache1/2.png)
+
+Paso dos - Crear un certificado SSL auto-firmado
+
+![3](/myblog/imagenes/apache1/3.png)
+
+![4](/myblog/imagenes/apache1/4.png)
+
+![5](/myblog/imagenes/apache1/5.png)
+
+![6](/myblog/imagenes/apache1/6.png)
+
+Paso tres - Configurar Apahce para que use SSL
+
+![7](/myblog/imagenes/apache1/7.png)
+
+![8](/myblog/imagenes/apache1/8.png)
+
+Paso cuatro - Configurar /etc/hosts
+
+![9](/myblog/imagenes/apache1/9.png)
+
+Paso cinco - Activar el Host Virtual con SSL
+
+![10](/myblog/imagenes/apache1/10.png)
+
+Paso seis - Probar nuestra configuración
+
+![11](/myblog/imagenes/apache1/11.png)
+
+Redirigir el tráfico de nuestro sitio.
+
+![12](/myblog/imagenes/apache1/12.png)
