@@ -3,7 +3,7 @@ typora-root-url: ../../
 typora-copy-images-to ../imagenes/apache1
 layout: post
 title:  "Práctica: Apache 1"
-categories: ciberseguridad
+categories: jekyll update
 ---
 Paso uno - Activar el módulo SSL
 

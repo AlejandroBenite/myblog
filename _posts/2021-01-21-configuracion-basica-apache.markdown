@@ -3,7 +3,7 @@ typora-root-url: ../../
 typora-copy-images-to ../imagenes/config_apache
 layout: post
 title:  "Práctica: Configuración básica de Apache"
-categories: ciberseguridad
+categories: jekyll update
 ---
 Tarea 1
 
