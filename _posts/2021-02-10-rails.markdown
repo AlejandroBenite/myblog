@@ -1,0 +1,58 @@
+---
+typora-root-url: ../../
+typora-copy-images-to ../imagenes/rails
+layout: post
+title: "Práctica: Django"
+categories: jekyll update
+---
+En primer lugar creamos un directorio con el nombre '*rails*'. Creamos un fichero vacío de nombre '*dockerfile*'.
+
+![1](/myblog/imagenes/rails/1.png)
+
+Insertamos el siguiente código dentro del fichero *dockerfile*.
+
+![2](/myblog/imagenes/rails/2.png)
+
+Después de haber guardado, creamos un fichero con el nombre '*gemfile*' y pegamos el siguiente código dentro de él.
+
+![4](/myblog/imagenes/rails/4.png)
+
+Creamos el fichero '*gemfile.lock*' y lo dejamos vacío. Además, habrá que crear un script con el nombre '*entrypoint.sh*'.
+
+![6](/myblog/imagenes/rails/6.png)
+
+Dentro del fichero *entrypoint.sh* pegamos el siguiente código.
+
+![7](/myblog/imagenes/rails/7.png)
+
+A continuación, creamos el archivo *docker-compose.yml* e introducimos el siguiente código en él.
+
+![9](/myblog/imagenes/rails/9.png)
+
+Una vez guardado, ejecutamos en el terminal la instrucción que vemos en la siguiente imagen.
+
+![10](/myblog/imagenes/rails/10.png)
+
+Si listamos el contenido del directorio *rails*, vemos que se han creado varios directorios y archivos cuyo propietario es *root*.
+
+![11](/myblog/imagenes/rails/11.png)
+
+Cambiamos el propietario y el grupo de *root* a *usuario1*.
+
+![12](/myblog/imagenes/rails/12.png)
+
+Una vez hechos los cambios, vamos a editar el archivo *database.yml* que se encuentra dentro de la carpeta *config*. Nos situamos en el apartado *default* y el código que hay lo sustituimos por el siguiente.
+
+![13](/myblog/imagenes/rails/13.png)
+
+Ejecutamos el siguiente comando en el terminal.
+
+![14](/myblog/imagenes/rails/14.png)
+
+En otro terminal ejecutamos el siguiente comando, para crear una base de datos.
+
+![15](/myblog/imagenes/rails/15.png)
+
+Para acabar, abrimos el navegador e introducimos la dirección http://localhost:3000 para ver la web de bienvenida de Rails.
+
+![16](/myblog/imagenes/rails/16.png)

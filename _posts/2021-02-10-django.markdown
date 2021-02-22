@@ -1,0 +1,50 @@
+---
+typora-root-url: ../../
+typora-copy-images-to ../imagenes/django
+layout: post
+title: "Práctica: Django"
+categories: jekyll update
+---
+En primer lugar creamos un directorio con el nombre '*django*'. Creamos un fichero vacío de nombre '*dockerfile*'.
+
+![1](/myblog/imagenes/django/1.png)
+
+Abrimos el fichero y pegamos en él el código que se muestra a continuación.
+
+![2](/myblog/imagenes/django/2.png)
+
+Ahora creamos otros dos ficheros vacíos , '*docker-compose.yml*' y '*requirements.txt*'.
+
+![3](/myblog/imagenes/django/3.png)
+
+En el fichero '*docker-compose.yml*' pegamos el siguiente código.
+
+![4](/myblog/imagenes/django/4.png)
+
+Y en el fichero '*requirements.txt*'.
+
+![5](/myblog/imagenes/django/5.png)
+
+A continuación, ejecutamos el siguiente comando en el terminal.
+
+![6](/myblog/imagenes/django/6.png)
+
+Si abrimos o listamos la carpeta '*django*', podemos observar que se han creado dos ficheros al ejecutar el comando anterior.
+
+![7](/myblog/imagenes/django/7.png)
+
+Cambiamos el usuario y el grupo propietario ya que, ahora mismo, esos dos directorios pertenecen al usuario *root*.
+
+![8](/myblog/imagenes/django/8.png)
+
+Dentro del directorio '*composeexample*', editamos el fichero '*settings.py*'. Cambiamos el código que hay en el apartado '*databases*' por el siguiente código.
+
+![9](/myblog/imagenes/django/9.png)
+
+Ahora ejecutamos el siguiente comando.
+
+![10](/myblog/imagenes/django/10.png)
+
+Abrimos una pestaña nueva en el navegador y accedemos a la dirección http://localhost:8000 y se mostrará la página de bienvenida de Django.
+
+![11](/myblog/imagenes/django/11.png)
