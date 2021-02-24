@@ -1,0 +1,59 @@
+---
+typora-root-url: ../../
+typora-copy-images-to ../imagenes/nginx
+layout: post
+title: "Práctica: Nginx"
+categories: jekyll update
+---
+INSTALACIÓN.
+
+Para instalar y ejecutar el servidor web Nginx, ejecutamos el siguiente comando.
+
+![1](/myblog/imagenes/nginx/1.png)
+
+Esto ejecuta la imagen nginx en un contenedor con el nombre web, y lo publica en el puerto 8080 en la red del host.
+
+Entramos en la dirección http://localhost:8080 y vemos la página de bienvenida.
+
+![2](/myblog/imagenes/nginx/2.png)
+
+Para detenerlo, ejecutamos el siguiente comando.
+
+![3](/myblog/imagenes/nginx/3.png)
+
+
+
+AGREGAR HTML PERSONALIZADO.
+
+Creamos un directorio llamado nginx en Documentos. Dentro de este, creamos un directorio con el nombre site-content, donde crearemos un archivo llamado index.html con el siguiente código.
+
+![5](/myblog/imagenes/nginx/5.png)
+
+Ejecutamos el siguiente comando para montar el directorio que hemos creado en /usr/share/nginx/html.
+
+![6](/myblog/imagenes/nginx/6.png)
+
+Refrescamos localhost:8080 y aparece lo siguiente.
+
+![7](/myblog/imagenes/nginx/7.png)
+
+
+
+CREAR UNA IMAGEN PERSONALIZADA.
+
+Creamos un fichero Dockerfile dentro del directorio nginx que hemos creado anteriormente, y dentro del archivo pegamos el código siguiente.
+
+![4](/myblog/imagenes/nginx/4.png)
+
+Construimos la imagen:
+
+![8](/myblog/imagenes/nginx/8.png)
+
+Ahora ejecutamos la imagen en un contenedor.
+
+![9](/myblog/imagenes/nginx/9.png)
+
+Ypara acabar, entramos de nuevo en http://localhost:8080
+
+![10](/myblog/imagenes/nginx/10.png)
+
