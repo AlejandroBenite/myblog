@@ -1,0 +1,24 @@
+---
+typora-root-url: ../../
+typora-copy-images-to ../imagenes/trivy
+layout: post
+title: "Práctica: Trivy"
+categories: jekyll update
+---
+TRIVY.
+
+Trivy es un escaner de vulnerabilidades para contenedores de Docker u otros artefactos. Este programa requiere instalación así que, para instalarlo en Debian o en Ubuntu, ejecutamos los sigueintes comandos.
+
+![1](/myblog/imagenes/trivy/1.png)
+
+![2](/myblog/imagenes/trivy/2.png)
+
+Ahora simplemente tenemos que ejecutar trivy junto a la imagen que queremos escanear. En este caso, he utilizado una imagen de wordpress en su versión 5.3.0 y , para controlar la salida, he utilizado una tubería con la opción 'more'.
+
+![3](/myblog/imagenes/trivy/3.png)
+
+Al principio se muestran el total de vulnerabilidades de la versión y las clasifica según el nivel de riesgo. Puede tratarse de un riesgo desconocido, bajo, medio, alto o crítico.
+
+Las vulnerabilidades se muestran en una tabla en la que se especifica la libreria, el ID de la vulnerabilidad, el nivel de reisgo, la versión en la que viene y la versión en la que se arregla la vulnerabilidad. A continuación hay una muestra de esta tabla.
+
+![4](/myblog/imagenes/trivy/4.png)
