@@ -1,0 +1,80 @@
+---
+typora-root-url: ../../
+typora-copy-images-to ../imagenes/dockerhub
+layout: post
+title: "Reto: Conectar Docker Hub y GitHub"
+categories: jekyll update
+---
+AUTOMATIZACIÓN EN DOCKER.
+
+Introducción.
+
+El objetivo de esta práctica es el de realizar complicaciones automatizadas de Docker, es decir, lo que queremos conseguir es que cuando subamos varios archivos comprimidos en GitHub, de forma automática, se compilen en Docker Hub y estén listas para su uso.
+
+Primero crearemos un repositorio en GitHub, después crearemos un repositorio en Docker Hub, que enlazaremos con el repositorio de GitHub, y por último subiremos un Dockerfile a GitHub para comprobar que también se copia en Docker Hub.
+
+
+
+Herramientas.
+
+​	·     GitHub.
+
+​	·     Docker Hub.
+
+
+
+Desarrollo de la práctica.
+
+Antes de comenzar a hacer nada, es necesario crear una cuenta en Docker Hub para poder enlazarla GitHub. Además, crearemos un repositorio en GitHub que se utilizará para subir los DockerFile. Después de realizar estos dos pasos, hay que iniciar sesión.
+
+Una vez estemos dentro en la parte superior derecha se pueden ver varias opciones con menús desplegables, nos situamos sobre el nombre de nuestra cuenta y seleccionamos la opción de ‘*Account Settings*’.
+
+![1](/myblog/imagenes/dockerhub/1.png)
+
+Pulsamos en ‘*Linked Accounts*’ y vemos que se ofrece la posibilidad de vincular una cuenta de GitHub y una cuenta de Bitbucket. Pulsamos en ‘*Connect*’ para asociar nuestra cuenta de GitHub.
+
+![2](/myblog/imagenes/dockerhub/2.png)
+
+Se informará de que Docker Hub quiere tener acceso a nuestra cuenta de GitHub. Pulsamos en ‘*Authorize Docker*’.
+
+![3](/myblog/imagenes/dockerhub/3.png)
+
+Una vez autorizado, observamos que tenemos la cuenta vinculada.
+
+![4](/myblog/imagenes/dockerhub/4.png)
+
+A continuación vamos a crear un repositorio en Docker Hub, este repositorio es el que vincularemos con el que hemos creado en GitHub.
+
+Para crear un repositorio pulsamos en ‘*Repositories*’ y en ‘*Create repository*’.
+
+![5](/myblog/imagenes/dockerhub/5.png)
+
+Le asignamos un nombre al repositorio, en este caso *server*, una descripción, aunque este apartado es opcional, elegimos si el repositorio va a ser público o privado y antes de crearlo pulsamos en el logo de GitHub, marcado en rojo en la imagen.
+
+![6](/myblog/imagenes/dockerhub/6.png)
+
+Seleccionamos nuestra cuenta y el repositorio de GitHub que hemos creado para esta práctica, que en mi caso se llama DockerHub. Además podemos añadir reglas para especificar como subir los archivos de origen en Docker Hub.
+
+La primera regla lo que hace es que cada vez que se sube un archivo en el repositorio DockerHub de nuestro GitHub, Docker Hub se encargará de coger esos archivos y de crear el contenedor.
+
+Con la segunda regla se crea otra versión conforme se vayan añadiendo cosas en los archivos, es decir, si añadimos un nuevo comando en el Dockerfile, Docker Hub lo tomará como una nueva versión.
+
+Podemos ayudarnos de la tabla para ver ejemplos de reglas y las diversas opciones que podemos poner.
+
+![7](/myblog/imagenes/dockerhub/7.png)
+
+En este caso, el repositorio de GitHub está vacío, así que le damos a ‘*Create*’ y ya tendremos creado nuestro repositorio.
+
+![8](/myblog/imagenes/dockerhub/8.png)
+
+Ahora creamos un Dockerfile sencillo en el que instalaremos Apache y PHP.
+
+![9](/myblog/imagenes/dockerhub/9.png)
+
+Una vez creado lo subimos a nuestro repositorio de GitHub. Cuando se haya subido, vamos al Docker Hub y nos dirigimos a la pestaña ‘*Builds*’, nos dirigimos al apartado ‘*Automated Build*’ y vemos que la subida del Dockerfile a Docker Hub está en progreso.
+
+![10](/myblog/imagenes/dockerhub/10.png)
+
+Cuando salga ‘*Success*’ pulsamos en la pestaña ‘*General*’ y vemos que se ha subido con éxito.
+
+![11](/myblog/imagenes/dockerhub/11.png)
