@@ -4,4 +4,3 @@
 
 layout: home
 ---
-<p> [Reto 2] ({% https://alejandrobenite.github.io/myblog/2021/05/12/2021-04-21-reto2.html %})</p>
